@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quiénes somos? - LumiNova</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #chatbot {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        #chatOutput {
+            margin-top: 10px;
+        }
+
+        .equipo {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .perfil {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .perfil img {
+            width: 300px; /* Ajusta el ancho de la imagen */
+            height: auto; /* Mantiene la proporción de la imagen */
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .perfil h3 {
+            margin: 10px 0 5px;
+        }
+
+        .perfil p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Luminova.jpeg" alt="Logo de LumiNova" class="logo-img"> <!-- Agrega la imagen aquí -->
+            <h1>LumiNova</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+                <li><a href="quienes_somos.html">Acerca de Nosotros</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>¿Quiénes Somos?</h2>
+        <div class="perfil-ws"> <!-- Contenedor para el texto y la imagen -->
+            <div class="perfil-texto"> <!-- Contenedor solo para el texto -->
+                <p class="descripcion_2">Soy estudiante de la Unidad Educativa Montepiedra, actualmente en 2do B, especializándome en Informática. Mi nombre es William Soledispa y tengo 15 años de edad. Este proyecto nace como parte de un trabajo escolar en el que buscamos aplicar nuestros conocimientos en desarrollo web. A través de este emprendimiento, tenemos la oportunidad de ofrecer servicios a otras marcas, lo que nos permite no solo practicar lo que hemos aprendido en clase, sino también adquirir habilidades valiosas para el futuro. Estamos entusiasmados con la posibilidad de crear soluciones innovadoras y contribuir al crecimiento de otros negocios mientras continuamos nuestra educación y desarrollo personal.</p>
+                <p class="descripcion_2">
+                    <strong>Objetivo:</strong> Mi objetivo es crear soluciones digitales eficientes y atractivas, ayudando a empresas a establecer o mejorar su presencia en línea. Con experiencia en diseño y desarrollo de páginas web, queremos usar este proyecto como un trampolín para promocionar nuestros servicios en el futuro y seguir aprendiendo sobre el mundo de la tecnología.
+                </p>
+            </div>
+    
+            <img src="william.jpg" alt="Miembro del equipo 1" class="perfil-img"> <!-- Imagen del perfil -->
+        </div>
+    
+        <!-- Chatbot básico -->
+        <div id="chatbot">
+            <input type="text" id="userInput" placeholder="Escribe tu pregunta">
+            <button id="sendBtn">Enviar</button>
+            <div id="chatOutput"></div>
+        </div>
+    </section>
+    
+
+    <script src="script.js"></script>
+
+    <footer>
+        <p>© 2024 LumiNova. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    padding: 10px 0; /* Ajusta el padding si es necesario */
+    display: flex; /* Añade esto para alinear el contenido del header */
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 28px; /* Fuente más grande */
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #ffffff; /* Color del texto */
+    font-family: 'Georgia', serif; /* Fuente destacada para el logo */
+}
+
+
+nav {
+    margin-left: 500px; /* Reduce este valor para acercar el menú al logo */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: lightblue;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: beige;
+}
+
+.intro, .about-us, .news, .contact {
+    padding: 50px;
+    text-align: center;
+}
+
+.carousel img {
+    width: 80%;
+    border-radius: 10px;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.team-reveal {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.team-member {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.news-article {
+    margin-bottom: 40px;
+}
+
+#map iframe {
+    border: none;
+    border-radius: 10px;
+}
+
+.servicios {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.servicios-container {
+    display: flex;
+    justify-content: space-around; /* Espacia los servicios uniformemente */
+    flex-wrap: wrap; /* Permite que los servicios se ajusten en diferentes líneas si es necesario */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.servicio {
+    background-color: #f4f4f9;
+    border: 1px solid #ddd; /* Bordes alrededor de cada servicio */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px;
+    margin: 10px; /* Espaciado entre servicios */
+    flex: 1 1 30%; /* Se adapta en un 30% del ancho del contenedor */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.servicio-img {
+    width: 210px; /* Mayor ancho para una imagen más grande */
+    height: 150px; /* Altura en proporción */
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 10%; /* Opcional: mantiene bordes ligeramente redondeados */
+}
+
+
+.servicio h3 {
+    font-size: 24px; /* Tamaño del título del servicio */
+}
+
+.servicio p {
+    font-size: 16px; /* Tamaño del texto del servicio */
+}
+
+.entry {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.entry-img {
+    width: 250px; /* Cambia el tamaño según tu preferencia */
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+.entry-content {
+    flex: 1;
+}
+
+.entry h3 {
+    margin-top: 0;
+    color: black;
+}
+
+.entry p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.foto-img {
+    width: 190px; /* Mayor ancho para una imagen más grande */
+    height: 220px; /* Altura en proporción */
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 50%; /* Opcional: mantiene bordes ligeramente redondeados */
+}
+
+.desarrollador {
+    font-size: 40px; /* Tamaño grande para "Desarrollador Web" */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centrar el texto */
+}
+
+.nombre {
+    font-size: 30px; /* Tamaño mediano para "William Soledispa" */
+    text-align: center; /* Centrar el texto */
+}
+
+.perfil-container {
+    max-width: 700px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el texto */
+}
+
+.perfil-texto {
+    max-width: 70%; /* Limita el ancho del texto */
+}
+
+.perfil-img {
+    width: 300px; /* Ajusta el ancho de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.perfil-ws {
+    display: flex; /* Usa flexbox para alinear la imagen y el texto */
+    justify-content: 20px; /* Espacio entre el texto y la imagen */
+    align-items: flex-start; /* Alinea el texto y la imagen al inicio */
+}
+
+.descripcion {
+    font-size: 17px; /* Tamaño más grande para el texto del párrafo */
+    max-width: 550px; /* Ancho máximo para limitar el texto */
+    margin: 0 auto; /* Centra el párrafo */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+.descripcion_2 {
+    font-size: 19px; /* Tamaño más grande para el texto del párrafo */
+    margin: 0 auto; /* Centra el párrafo */
+    line-height: 1.9; /* Espaciado entre líneas */
+}
+
+.logo {
+    display: flex; /* Alinea la imagen y el texto en línea */
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+}
+
+.logo-img {
+    width: 70px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

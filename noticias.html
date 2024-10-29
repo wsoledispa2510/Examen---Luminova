@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - LumiNova</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos específicos para la página de blog/noticias */
+        #blog {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #blog h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+
+        .entry {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .entry h3 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .entry p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Formulario de entrada */
+        #newEntryForm {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #newEntryForm input, #newEntryForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #newEntryForm button {
+            padding: 10px 20px;
+            background-color: lightblue;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #newEntryForm button:hover {
+            background-color: gray;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            #blog {
+                width: 95%;
+            }
+
+            .entry {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Luminova.jpeg" alt="Logo de LumiNova" class="logo-img"> <!-- Agrega la imagen aquí -->
+            <h1>LumiNova</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">servicios</a></li>
+                <li><a href="quienes_somos.html">Acerca de Nosotros</a></li>
+                <li><a href="contactenos.html">Contáctenos</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="blog">
+        <h2>Blog y Noticias</h2>
+        <div id="entries">
+            <div class="entry">
+                <img src="facilitaln.jpg" alt="Imagen de noticia 1" class="entry-img">
+                <div class="entry-content">
+                <h3> ¡Nuevas funciones en nuestra página web! - 07/10/2024</h3>
+                <p>Estamos emocionados de anunciar que hemos añadido nuevas funciones a nuestra página web. Ahora podrás disfrutar de una interfaz más amigable y rápida, así como de secciones interactivas que facilitan la navegación. Tu experiencia es nuestra prioridad, y seguimos trabajando para mejorar cada día. ¡Explora las novedades y cuéntanos qué te parecen!</p>
+            </div>
+        </div>
+        <div class="entry">
+            <img src="actualizacionds.jpg" alt="Imagen de noticia 2" class="entry-img">
+            <div class="entry-content">
+                <h3> Actualización de servicios de desarrollo web - 01/09/2024</h3>
+                <p>Para celebrar el lanzamiento de nuestra nueva página web, ofrecemos un 20% de descuento en todos nuestros servicios de desarrollo web durante este mes. Aprovecha esta oportunidad para mejorar tu presencia en línea a un precio especial. ¡No esperes más! Los descuentos son válidos hasta el 31 de octubre de 2024. Contacta con nosotros para más detalles.</p>
+            </div>
+        </div>
+        <div class="entry">
+            <img src="20porciento.png" alt="Imagen de noticia 2" class="entry-img">
+            <div class="entry-content">
+                <h3> Descuentos especiales por tiempo limitado - 26/07/2024</h3>
+                <p>Para celebrar el lanzamiento de nuestra nueva página web, ofrecemos un 20% de descuento en todos nuestros productos de interiores durante este mes. Aprovecha esta oportunidad para estas siempre comodos con nuestros productos a un precio especial. ¡No esperes más! Los descuentos son válidos hasta el 28 de  de 2024marzo. Contacta con nosotros para más detalles.</p>
+            </div>
+        </div>
+
+        <div id="newEntryForm">
+            <h3>Añadir Nueva Entrada</h3>
+            <input type="text" id="entryTitle" placeholder="Título de la entrada" required>
+            <textarea id="entryContent" rows="4" placeholder="Contenido de la entrada" required></textarea>
+            <button onclick="addEntry()">Añadir Entrada</button>
+        </div>
+    </section>
+
+    <script>
+        function addEntry() {
+            const title = document.getElementById("entryTitle").value;
+            const content = document.getElementById("entryContent").value;
+
+            if (title && content) {
+                const entriesDiv = document.getElementById("entries");
+
+                const newEntry = document.createElement("div");
+                newEntry.classList.add("entry");
+
+                const newTitle = document.createElement("h3");
+                newTitle.textContent = title;
+                newEntry.appendChild(newTitle);
+
+                const newContent = document.createElement("p");
+                newContent.textContent = content;
+                newEntry.appendChild(newContent);
+
+                entriesDiv.appendChild(newEntry);
+
+                // Limpiar el formulario
+                document.getElementById("entryTitle").value = "";
+                document.getElementById("entryContent").value = "";
+            } else {
+                alert("Por favor, complete todos los campos.");
+            }
+        }
+    </script>
+
+    <footer>
+        <p>© 2024 LumiNova. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
